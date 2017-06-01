@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: In program, I created a list that contains all the cells with length of 2. Now, unitlist is iterated to find naked twins. How did this happened? If two cells have same value and are in same column, row or square units then it is identified as Naked Twins. Once it is identified, we will iterate through the same unit to remove the numbers from other cells. Remember to remove individual characters, not the whole string. For example, if '23' is naked twins. Remove '2' and '3' separately. If you start replacing '23' then strings like '379' will be skipped.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In this case, we have take care that numbers shouldn't be repeated in diagonal cells. We have two diagonals for a sudoku. One starts from left top, I called it left_diagonal and other from right top, I called it right_diagonal. To do a Diagonal Sudoku, we can an additional constraint in 'eliminate' and 'only choice' functions. I created two lists, 'left_diagonal' and 'right_diagonal'. These two lists are used to identfied diagonal constraints. In case of elimination, I added these two list along with iteration of peer iteration. To work with only choice function, I created a new 'updateunitlist' with both right and left diagonals. This small changes makes the 'only_choice' work.
 
 ### Install
 
